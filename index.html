@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Penyewaan Lapangan Bulu Tangkis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏸 PENYEWAAN LAPANGAN BULU TANGKIS</h1>
+    <nav>
+      <button onclick="showSection('list')">📋 Data Penyewa</button>
+      <button onclick="showSection('add')">➕ Tambah Penyewa</button>
+      <button onclick="showSection('queue')">🧾 Antrian</button>
+      <button onclick="showSection('search')">🔍 Cari Penyewa</button>
+    </nav>
+
+    <!-- Daftar Penyewa -->
+    <section id="list" class="active">
+      <h2>Daftar Penyewa</h2>
+      <table id="tabelPenyewa">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Telepon</th>
+            <th>Waktu</th>
+            <th>Tanggal</th>
+            <th>Lapangan</th>
+            <th>Tarif</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Tambah Penyewa -->
+    <section id="add">
+      <h2>Tambah Penyewa Baru</h2>
+      <form id="formPenyewa">
+        <input type="number" id="no" placeholder="No Penyewa" required />
+        <input type="text" id="nama" placeholder="Nama Penyewa" required />
+        <input type="text" id="telepon" placeholder="Nomor Telepon" required />
+        <input type="text" id="waktu" placeholder="Waktu (HH.MM-HH.MM)" required />
+        <input type="text" id="tanggal" placeholder="Tanggal (DD/MM/YYYY)" required />
+        <select id="lapangan" required>
+          <option value="">Pilih Lapangan</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+        </select>
+        <input type="number" id="tarif" placeholder="Tarif" required />
+        <button type="submit">Tambahkan</button>
+      </form>
+    </section>
+
+    <!-- Antrian -->
+    <section id="queue">
+      <h2>Antrian Penyewa</h2>
+      <ul id="listAntrian"></ul>
+      <button onclick="prosesAntrian()">Proses Antrian</button>
+    </section>
+
+    <!-- Pencarian -->
+    <section id="search">
+      <h2>Cari Data Penyewa</h2>
+      <input type="text" id="searchNama" placeholder="Masukkan nama..." />
+      <button onclick="cariPenyewa()">Cari</button>
+      <div id="hasilCari"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
