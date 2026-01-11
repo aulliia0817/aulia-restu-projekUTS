@@ -1,2 +1,2 @@
 # aulia-restu-projekUTS
-website untuk mencatat jadwal pengguna lapangan bulu tangkis
+untuk mengetahui apakah balita terjangkit stunting
